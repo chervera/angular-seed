@@ -1,0 +1,22 @@
+<p>
+  persona works!
+</p>
+
+<table>
+  <tr *ngFor="let element of (personas$ | async)">
+    <td>{{ element.nombre }}</td>
+    <td><a (click)="select(element.id)">edit</a></td>
+  </tr>
+</table>
+
+<h1>PErsona seleccionada</h1>
+
+<article *ngIf="(persona$ | async); else loading">
+  <span>[{{ persona.nombre }}]</span>
+</article>
+
+<ng-template #loading>
+  <h1>
+    cap persona seleccionada
+  </h1>
+</ng-template>
