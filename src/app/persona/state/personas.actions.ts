@@ -1,5 +1,5 @@
 import { Action } from "@ngrx/store";
-import { Persona } from "../../../../persona/persona.model";
+import { Persona } from "../persona.model";
 
 export enum PersonasActionTypes {
   LoadPersonas = "[Personas] Load Personas",

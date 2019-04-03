@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { Persona } from "../../../../persona/persona.model";
+import { Persona } from "../persona.model";
 
 export interface PersonasState {
   personas: Persona[];

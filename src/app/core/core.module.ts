@@ -9,7 +9,7 @@ import { metaReducers, rootReducers } from "./store/state/root";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "../../environments/environment";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
-import { PersonasEffects } from "./store/state/personas/personas.effects";
+import { PersonasEffects } from "../persona/state/personas.effects";
 
 @NgModule({
   imports: [

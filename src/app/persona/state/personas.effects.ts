@@ -2,8 +2,8 @@ import { Injectable } from "@angular/core";
 import { Actions, Effect, ofType } from "@ngrx/effects";
 import { Observable, of } from "rxjs";
 import { catchError, map, mergeMap } from "rxjs/operators";
-import { PersonasService } from "../../../../persona/persona.service";
-import { Persona } from "../../../../persona/persona.model";
+import { PersonasService } from "../persona.service";
+import { Persona } from "../persona.model";
 import {
   PersonasActions,
   PersonasActionTypes,

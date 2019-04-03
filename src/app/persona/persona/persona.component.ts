@@ -10,11 +10,11 @@ import { RootState } from "../../core/store/state/root/root.state";
 import {
   LoadPersonas,
   LoadPersona
-} from "src/app/core/store/state/personas/personas.actions";
+} from "src/app/persona/state/personas.actions";
 import {
   personasSelector,
   personaSelector
-} from "src/app/core/store/state/personas/personas.state";
+} from "src/app/persona/state/personas.state";
 import { pipe } from "@angular/core/src/render3";
 
 @Component({
