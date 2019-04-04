@@ -9,7 +9,11 @@ import { metaReducers, rootReducers } from "./store/state/root";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "../../environments/environment";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
-import { PersonasEffects } from "../persona/state/personas.effects";
+
+import { MainComponent } from "./navigator/main.component";
+import { NavigatorComponent } from "./navigator/navigator.component";
+import { HeaderComponent } from "./navigator/header.component";
+import { FooterComponent } from "./navigator/footer.component";
 
 @NgModule({
   imports: [
@@ -19,8 +23,14 @@ import { PersonasEffects } from "../persona/state/personas.effects";
     StoreModule.forRoot(rootReducers, { metaReducers }),
     StoreRouterConnectingModule.forRoot({ stateKey: "router" }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([PersonasEffects])
+    EffectsModule.forRoot([])
   ],
-  declarations: []
+  declarations: [
+    NavigatorComponent,
+    HeaderComponent,
+    MainComponent,
+    FooterComponent
+  ],
+  exports: [NavigatorComponent]
 })
 export class CoreModule {}

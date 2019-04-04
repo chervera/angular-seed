@@ -1,0 +1,15 @@
+<h1>Logs</h1>
+
+<app-data-grid [items]="logs$ | async" (selected)="select($event)">
+</app-data-grid>
+
+<article *ngIf="(log$ | async); else loading">
+  <h2>Seleccionat el log numero {{ log.id }}</h2>
+  <span>[{{ log.app }}]</span>
+</article>
+
+<ng-template #loading>
+  <h2>
+    cap log seleccionat
+  </h2>
+</ng-template>

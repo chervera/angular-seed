@@ -4,9 +4,14 @@ import { NotFoundComponent } from "./not-found/not-found.component";
 
 const routes: Routes = [
   {
-    path: "",
+    path: "logs",
+    loadChildren: "./log/log.module#LogsModule"
+  },
+  {
+    path: "personas",
     loadChildren: "./persona/persona.module#PersonaModule"
   },
+  { path: "", redirectTo: "/logs", pathMatch: "full" },
   {
     path: "not-found",
     component: NotFoundComponent

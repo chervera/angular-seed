@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://localhost:4321/ws/"
+  apiUrl: "http://localhost:4321/ws/",
+  clearMessageDelayMs: 3000
 };
 
 /*

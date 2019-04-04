@@ -1,0 +1,7 @@
+<table>
+  <tr *ngFor="let element of items">
+    <td>{{ element.id }}</td>
+    <td>{{ element.app }}</td>
+    <td><a (click)="select(element.id)">edit</a></td>
+  </tr>
+</table>
